@@ -122,7 +122,7 @@ def Search_FlightDelay_DataSets(request):
 
             obj = flight_delay_prediction_model.objects.all().filter(names__contains=kword)
 
-            obj1 = flight_delay_prediction_model.objects.get(names__contains=kword)
+            obj1 = flight_delay_prediction_model.objects.get(name="A Duplicated Name")
 
             delay = obj1.Historical_Flight_Delay
             edelay = obj1.Expected_Delay
